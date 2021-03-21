@@ -5,6 +5,6 @@ import { StockService } from './stock/core/services/stock/stock.service';
 @Module({
   imports: [StockModule],
   controllers: [],
-  providers: [StockService],
+  providers: [],
 })
 export class AppModule {}
