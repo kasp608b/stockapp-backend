@@ -5,6 +5,6 @@ import * as Joi from '@hapi/joi';
 @Module({
   imports: [StockModule],
   controllers: [],
-  providers: [StockService],
+  providers: [],
 })
 export class AppModule {}
