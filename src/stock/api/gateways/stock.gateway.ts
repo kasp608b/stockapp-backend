@@ -23,13 +23,14 @@ export class StockGateway implements OnGatewayConnection {
   @WebSocketServer() server;
   @SubscribeMessage('updateStockPrice')
   handleUpdateStockPrice(
-    @MessageBody() stockId: string,
-    @MessageBody() newPrice: number,
+    @MessageBody() stock: Stock,
     @ConnectedSocket() client: Socket,
   ): void {
-    const stock = this.stockService.updateStockPrice(stockId, newPrice);
-    if (stock) {
-      this.server.emit('stockPriceUpdated', stock);
+    const newStock = this.stockService.updateStockPrice(stock);
+    if (newStock) {
+      console.log('Stuff is happenig');
+      this.server.emit('stockPriceUpdated', newStock);
+      this.server.emit('allStocks', this.stockService.getStocks());
     }
   }
   handleConnection(client: any, ...args: any[]): any {

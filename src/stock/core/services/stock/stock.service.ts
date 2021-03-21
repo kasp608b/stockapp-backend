@@ -40,9 +40,11 @@ export class StockService implements IStockService {
     return this.stocks;
   }
 
-  updateStockPrice(stockId: string, newPrice: number): Stock {
-    const stock = this.stocks.find((s) => s.id == stockId);
-    stock.price = newPrice;
+  updateStockPrice(stock: Stock): Stock {
+    const newStock = this.stocks.find((s) => s.id == stock.id);
+    newStock.price = stock.price;
+    const stock1 = this.stocks.find((s) => s.id == newStock.id);
+    console.log(stock1.price);
     return stock;
   }
 }
