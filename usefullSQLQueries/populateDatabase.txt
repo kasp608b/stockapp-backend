@@ -1,5 +1,3 @@
-Sql insert to use to populate database:
-
 INSERT INTO stock_entity (
     id,
     price,
