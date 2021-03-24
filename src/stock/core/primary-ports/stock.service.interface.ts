@@ -5,4 +5,5 @@ export interface IStockService {
   getStocks(): Stock[];
 
   updateStockPrice(stock: Stock): Stock;
+  //øf
 }
