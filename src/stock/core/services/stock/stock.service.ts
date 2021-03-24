@@ -25,5 +25,4 @@ export class StockService implements IStockService {
     console.log(updatedStock.price);
     return updatedStock;
   }
-  //hmm
 }
