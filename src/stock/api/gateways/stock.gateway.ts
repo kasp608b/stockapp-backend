@@ -15,6 +15,7 @@ import {
   IStockService,
   IStockServiceProvider,
 } from '../../core/primary-ports/stock.service.interface';
+//WHat
 @WebSocketGateway()
 export class StockGateway implements OnGatewayConnection {
   constructor(
