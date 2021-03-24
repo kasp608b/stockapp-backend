@@ -47,4 +47,5 @@ export class StockService implements IStockService {
     console.log(stock1.price);
     return stock;
   }
+  //HAHAHHA
 }
